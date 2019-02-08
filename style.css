@@ -419,3 +419,10 @@ Media Queries
 @media only screen and (min-width : 1200px) {
 
 }
+
+/*--------------------------------------------------------------
+Search
+--------------------------------------------------------------*/
+.search-highlight {
+	background:#FFFF00  
+}
