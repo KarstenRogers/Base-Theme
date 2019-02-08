@@ -112,6 +112,18 @@ img.wp-post-image {
 	margin-bottom: 20px;
 }
 
+.author-meta {
+	margin-top: 40px;
+}
+
+.author-meta .avatar {
+	border-radius: 50%;
+}
+
+.author-meta .fa{
+	font-size: 22px;
+}
+
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/
