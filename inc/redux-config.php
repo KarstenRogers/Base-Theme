@@ -235,42 +235,34 @@
                 }
 
                 // ACTUAL DECLARATION OF SECTIONS
-               
-                    // Header
-                    $this->sections[] = array(
-                    'icon'      => 'el-icon-website',
-                    'title'     => __('Header', 'bootstrapwp'),
-                    'fields'    => array(
+               // Header
+               $this->sections[] = array(
+                'icon'      => 'el-icon-website',
+                'title'     => __('Header', 'bootstrapwp'),
+                'fields'    => array(
                     array( 
-                    'title'     => __( 'Fixed Navbar', 'bootstrapwp' ),
-                    'subtitle'  => __( 'Select to enable/disable a fixed navbar.', 'bootstrapwp' ),
-                    'id'        => 'disable_fixed_navbar',
-                    'default'   => false,
-                    'on'        => __( 'Enable', 'bootstrapwp' ),
-                    'off'       => __( 'Disable', 'bootstrapwp' ),
-                    'type'      => 'switch',
+                        'title'     => __( 'Fixed Navbar', 'bootstrapwp' ),
+                        'subtitle'  => __( 'Select to enable/disable a fixed navbar.', 'bootstrapwp' ),
+                        'id'        => 'disable_fixed_navbar',
+                        'default'   => false,
+                        'on'        => __( 'Enable', 'bootstrapwp' ),
+                        'off'       => __( 'Disable', 'bootstrapwp' ),
+                        'type'      => 'switch',
                     ),
 
                     array( 
-                    'title'     => __( 'Inverse Navbar', 'bootstrapwp' ),
-                    'subtitle'  => __( 'Select to enable/disable an inverse navbar color.', 'bootstrapwp' ),
-                    'id'        => "disable_inverse_navbar",
-                    'default'   => false,
-                    'on'        => __( 'Enable', 'bootstrapwp' ),
-                    'off'       => __( 'Disable', 'bootstrapwp' ),
-                    'type'      => 'switch',
+                        'title'     => __( 'Inverse Navbar', 'bootstrapwp' ),
+                        'subtitle'  => __( 'Select to enable/disable an inverse navbar color.', 'bootstrapwp' ),
+                        'id'        => "disable_inverse_navbar",
+                        'default'   => false,
+                        'on'        => __( 'Enable', 'bootstrapwp' ),
+                        'off'       => __( 'Disable', 'bootstrapwp' ),
+                        'type'      => 'switch',
                     ),
-                    )
-                    );
-               
-
-                if ( file_exists( trailingslashit( dirname( __FILE__ ) ) . 'README.html' ) ) {
-                    $tabs['docs'] = array(
-                        'icon'    => 'el-icon-book',
-                        'title'   => __( 'Documentation', 'bootstrapwp' ),
-                        'content' => nl2br( file_get_contents( trailingslashit( dirname( __FILE__ ) ) . 'README.html' ) )
-                    );
-                }
+                )
+            );
+                  
+                
             }
 
             public function setHelpTabs() {

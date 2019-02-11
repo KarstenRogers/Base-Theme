@@ -21,10 +21,15 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 
-	<header id="masthead" class="site-header" role="banner">
+<header id="masthead" class="site-header" role="banner">
+
+	<?php 
+	$fixed = (bswp_option('disable_fixed_navbar') == '1' ? 'navbar-fixed-top' : 'navbar-static-top');
+	$inverse = (bswp_option('disable_inverse_navbar') == '1' ? 'navbar-inverse' : 'navbar-default');
+	?>
 
 	<nav role="navigation">
-	  <div class="navbar <?php if(bswp_option('disable_fixed_navbar') =='1') { echo "navbar-fixed-top"; } else {echo "navbar-static-top";} ?> <?php if(bswp_option('disable_inverse_navbar') == '1') { echo "navbar-inverse"; } else {echo "navbar-default";} ?> ">
+		<div class="navbar <?php echo $fixed; ?> <?php echo $inverse; ?> ">
 			<div class="container">
 				<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
 				<div class="navbar-header">
