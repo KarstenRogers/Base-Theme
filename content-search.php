@@ -37,7 +37,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">
-		<?php search_excerpt_highlight(); ?> ?>
+		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
