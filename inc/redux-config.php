@@ -4,9 +4,9 @@
      * For full documentation, please visit: https://docs.reduxframework.com
      * */
 
-    if ( ! class_exists( 'Redux_Framework_sample_config' ) ) {
+    if ( ! class_exists( 'Redux_Framework_bswp_config' ) ) {
 
-        class Redux_Framework_sample_config {
+        class Redux_Framework_bswp_config {
 
             public $args = array();
             public $sections = array();
@@ -105,8 +105,8 @@
             function dynamic_section( $sections ) {
                 //$sections = array();
                 $sections[] = array(
-                    'title'  => __( 'Section via hook', 'redux-framework-demo' ),
-                    'desc'   => __( '<p class="description">This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.</p>', 'redux-framework-demo' ),
+                    'title'  => __( 'Section via hook', 'bootstrapwp' ),
+                    'desc'   => __( '<p class="description">This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.</p>', 'bootstrapwp' ),
                     'icon'   => 'el-icon-paper-clip',
                     // Leave this as a blank section, no options just some intro text set above.
                     'fields' => array()
@@ -186,7 +186,7 @@
                 $screenshot  = $this->theme->get_screenshot();
                 $class       = $screenshot ? 'has-screenshot' : '';
 
-                $customize_title = sprintf( __( 'Customize &#8220;%s&#8221;', 'redux-framework-demo' ), $this->theme->display( 'Name' ) );
+                $customize_title = sprintf( __( 'Customize &#8220;%s&#8221;', 'bootstrapwp' ), $this->theme->display( 'Name' ) );
 
                 ?>
                 <div id="current-theme" class="<?php echo esc_attr( $class ); ?>">
@@ -195,25 +195,25 @@
                             <a href="<?php echo wp_customize_url(); ?>" class="load-customize hide-if-no-customize"
                                title="<?php echo esc_attr( $customize_title ); ?>">
                                 <img src="<?php echo esc_url( $screenshot ); ?>"
-                                     alt="<?php esc_attr_e( 'Current theme preview', 'redux-framework-demo' ); ?>"/>
+                                     alt="<?php esc_attr_e( 'Current theme preview', 'bootstrapwp' ); ?>"/>
                             </a>
                         <?php endif; ?>
                         <img class="hide-if-customize" src="<?php echo esc_url( $screenshot ); ?>"
-                             alt="<?php esc_attr_e( 'Current theme preview', 'redux-framework-demo' ); ?>"/>
+                             alt="<?php esc_attr_e( 'Current theme preview', 'bootstrapwp' ); ?>"/>
                     <?php endif; ?>
 
                     <h4><?php echo $this->theme->display( 'Name' ); ?></h4>
 
                     <div>
                         <ul class="theme-info">
-                            <li><?php printf( __( 'By %s', 'redux-framework-demo' ), $this->theme->display( 'Author' ) ); ?></li>
-                            <li><?php printf( __( 'Version %s', 'redux-framework-demo' ), $this->theme->display( 'Version' ) ); ?></li>
-                            <li><?php echo '<strong>' . __( 'Tags', 'redux-framework-demo' ) . ':</strong> '; ?><?php printf( $this->theme->display( 'Tags' ) ); ?></li>
+                            <li><?php printf( __( 'By %s', 'bootstrapwp' ), $this->theme->display( 'Author' ) ); ?></li>
+                            <li><?php printf( __( 'Version %s', 'bootstrapwp' ), $this->theme->display( 'Version' ) ); ?></li>
+                            <li><?php echo '<strong>' . __( 'Tags', 'bootstrapwp' ) . ':</strong> '; ?><?php printf( $this->theme->display( 'Tags' ) ); ?></li>
                         </ul>
                         <p class="theme-description"><?php echo $this->theme->display( 'Description' ); ?></p>
                         <?php
                             if ( $this->theme->parent() ) {
-                                printf( ' <p class="howto">' . __( 'This <a href="%1$s">child theme</a> requires its parent theme, %2$s.', 'redux-framework-demo' ) . '</p>', __( 'http://codex.wordpress.org/Child_Themes', 'redux-framework-demo' ), $this->theme->parent()->display( 'Name' ) );
+                                printf( ' <p class="howto">' . __( 'This <a href="%1$s">child theme</a> requires its parent theme, %2$s.', 'bootstrapwp' ) . '</p>', __( 'http://codex.wordpress.org/Child_Themes', 'bootstrapwp' ), $this->theme->parent()->display( 'Name' ) );
                             }
                         ?>
 
@@ -246,7 +246,7 @@
                 if ( file_exists( trailingslashit( dirname( __FILE__ ) ) . 'README.html' ) ) {
                     $tabs['docs'] = array(
                         'icon'    => 'el-icon-book',
-                        'title'   => __( 'Documentation', 'redux-framework-demo' ),
+                        'title'   => __( 'Documentation', 'bootstrapwp' ),
                         'content' => nl2br( file_get_contents( trailingslashit( dirname( __FILE__ ) ) . 'README.html' ) )
                     );
                 }
@@ -257,18 +257,18 @@
                 // Custom page help tabs, displayed using the help API. Tabs are shown in order of definition.
                 $this->args['help_tabs'][] = array(
                     'id'      => 'redux-help-tab-1',
-                    'title'   => __( 'Theme Information 1', 'redux-framework-demo' ),
-                    'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'redux-framework-demo' )
+                    'title'   => __( 'Theme Information 1', 'bootstrapwp' ),
+                    'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'bootstrapwp' )
                 );
 
                 $this->args['help_tabs'][] = array(
                     'id'      => 'redux-help-tab-2',
-                    'title'   => __( 'Theme Information 2', 'redux-framework-demo' ),
-                    'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'redux-framework-demo' )
+                    'title'   => __( 'Theme Information 2', 'bootstrapwp' ),
+                    'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'bootstrapwp' )
                 );
 
                 // Set the help sidebar
-                $this->args['help_sidebar'] = __( '<p>This is the sidebar content, HTML is allowed.</p>', 'redux-framework-demo' );
+                $this->args['help_sidebar'] = __( '<p>This is the sidebar content, HTML is allowed.</p>', 'bootstrapwp' );
             }
 
             /**
@@ -291,8 +291,8 @@
                     //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
                     'allow_sub_menu'       => true,
                     // Show the sections below the admin menu item or not
-                    'menu_title'           => __( 'Sample Options', 'redux-framework-demo' ),
-                    'page_title'           => __( 'Sample Options', 'redux-framework-demo' ),
+                    'menu_title'           => __( 'Options', 'bootstrapwp' ),
+                    'page_title'           => __( 'Options', 'bootstrapwp' ),
                     // You will need to generate a Google API key to use this feature.
                     // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
                     'google_api_key'       => '',
@@ -310,7 +310,7 @@
                     // Choose an priority for the admin bar menu
                     'global_variable'      => '',
                     // Set a different name for your global variable other than the opt_name
-                    'dev_mode'             => true,
+                    'dev_mode'             => false,
                     // Show the time the page took to load, etc
                     'update_notice'        => true,
                     // If dev_mode is enabled, will notify developer of updated versions available in the GitHub Repo
@@ -392,58 +392,58 @@
                 $this->args['admin_bar_links'][] = array(
                     'id'    => 'redux-docs',
                     'href'   => 'http://docs.reduxframework.com/',
-                    'title' => __( 'Documentation', 'redux-framework-demo' ),
+                    'title' => __( 'Documentation', 'bootstrapwp' ),
                 );
 
                 $this->args['admin_bar_links'][] = array(
                     //'id'    => 'redux-support',
                     'href'   => 'https://github.com/ReduxFramework/redux-framework/issues',
-                    'title' => __( 'Support', 'redux-framework-demo' ),
+                    'title' => __( 'Support', 'bootstrapwp' ),
                 );
 
                 $this->args['admin_bar_links'][] = array(
                     'id'    => 'redux-extensions',
                     'href'   => 'reduxframework.com/extensions',
-                    'title' => __( 'Extensions', 'redux-framework-demo' ),
+                    'title' => __( 'Extensions', 'bootstrapwp' ),
                 );
 
                 // SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
                 $this->args['share_icons'][] = array(
-                    'url'   => 'https://github.com/ReduxFramework/ReduxFramework',
-                    'title' => 'Visit us on GitHub',
+                    'url'   => 'https://github.com/KarstenRogers',
+                    'title' => 'Visit me on GitHub',
                     'icon'  => 'el-icon-github'
                     //'img'   => '', // You can use icon OR img. IMG needs to be a full URL.
                 );
                 $this->args['share_icons'][] = array(
-                    'url'   => 'https://www.facebook.com/pages/Redux-Framework/243141545850368',
-                    'title' => 'Like us on Facebook',
+                    'url'   => 'https://www.facebook.com/karsten.rogers.5',
+                    'title' => 'Like me on Facebook',
                     'icon'  => 'el-icon-facebook'
                 );
                 $this->args['share_icons'][] = array(
-                    'url'   => 'http://twitter.com/reduxframework',
-                    'title' => 'Follow us on Twitter',
+                    'url'   => 'https://twitter.com/KarstenRogers',
+                    'title' => 'Follow me on Twitter',
                     'icon'  => 'el-icon-twitter'
                 );
                 $this->args['share_icons'][] = array(
-                    'url'   => 'http://www.linkedin.com/company/redux-framework',
-                    'title' => 'Find us on LinkedIn',
+                    'url'   => 'https://www.linkedin.com/in/karsten-rogers-8394a3177/',
+                    'title' => 'Find me on LinkedIn',
                     'icon'  => 'el-icon-linkedin'
                 );
 
-                // Panel Intro text -> before the form
+                      // Panel Intro text -> before the form
                 if ( ! isset( $this->args['global_variable'] ) || $this->args['global_variable'] !== false ) {
                     if ( ! empty( $this->args['global_variable'] ) ) {
                         $v = $this->args['global_variable'];
                     } else {
                         $v = str_replace( '-', '_', $this->args['opt_name'] );
                     }
-                    $this->args['intro_text'] = sprintf( __( '<p>Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <strong>$%1$s</strong></p>', 'redux-framework-demo' ), $v );
+                    $this->args['intro_text'] = sprintf( __( '<p></p>', 'bootstrapwp' ), $v );
                 } else {
-                    $this->args['intro_text'] = __( '<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'redux-framework-demo' );
+                    $this->args['intro_text'] = __( '<p></p>', 'bootstrapwp' );
                 }
 
                 // Add content after the form.
-                $this->args['footer_text'] = __( '<p>This text is displayed below the options panel. It isn\'t required, but more info is always better! The footer_text field accepts all HTML.</p>', 'redux-framework-demo' );
+                $this->args['footer_text'] = __( '<p></p>', 'bootstrapwp' );
             }
 
             public function validate_callback_function( $field, $value, $existing_value ) {
@@ -480,9 +480,9 @@
         }
 
         global $reduxConfig;
-        $reduxConfig = new Redux_Framework_sample_config();
+        $reduxConfig = new Redux_Framework_bswp_config();
     } else {
-        echo "The class named Redux_Framework_sample_config has already been called. <strong>Developers, you need to prefix this class with your company name or you'll run into problems!</strong>";
+        echo "The class named Redux_Framework_bswp_config has already been called. <strong>Developers, you need to prefix this class with your company name or you'll run into problems!</strong>";
     }
 
     /**
