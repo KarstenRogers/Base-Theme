@@ -216,3 +216,8 @@ require get_template_directory() . '/inc/post-types/CPT.php';
 
 //Portfolio Custom Post Type
 require get_template_directory() . '/inc/post-types/register-portfolio.php';
+
+/**
+ * Theme Options - Custom CSS.
+ */
+require get_template_directory() . '/inc/custom-css.php';
