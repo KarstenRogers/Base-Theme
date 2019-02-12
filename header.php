@@ -39,7 +39,15 @@
 						<span class="icon-bar"></span>
 					</button>
 
-					<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ) ?>" rel="homepage"><?php bloginfo( 'name' ) ?></a>
+
+					<?php $logo = bswp_option('custom_logo', false, 'url'); ?>
+
+					<?php if($logo !== '') { ?>
+						<a href="<?php bloginfo( 'url' ) ?>/" title="<?php bloginfo( 'name' ) ?>" rel="homepage"><img src="<?php echo $logo ?>" alt="<?php bloginfo( 'name' ) ?>"></a>
+					<?php } else { ?>
+						<a class="navbar-brand" href="<?php bloginfo( 'url' ) ?>/" title="<?php bloginfo( 'name' ) ?>" rel="homepage"><?php bloginfo( 'name' ) ?></a>
+					<?php } ?>
+					
 				</div>
 
 				<div class="navbar-collapse collapse navbar-responsive-collapse">
